@@ -18,6 +18,8 @@ desktop_keywords=api,json,http,request,web
 desktop_terminal=false
 desktop_type=Application
 desktop_categories="Api;JSON;HTTP;Request;Web;Rest;API Client;"
+desktop_startup_wm_class="Apidog"
+desktop_exec="$executable_path %u"
 
 echo "Welcome to $display_name tarball installer, just chill and wait for the installation to complete!"
 
@@ -78,10 +80,11 @@ echo "
 [Desktop Entry]
 Name=$display_name
 Keywords=$desktop_keywords
-Exec=$executable_path
+Exec=$desktop_exec
 Icon=$icon_path
 Terminal=$desktop_terminal
 Type=$desktop_type
+StartupWMClass=$desktop_startup_wm_class
 Categories=$desktop_categories
 " >> $desktop_in_local_applications
 
