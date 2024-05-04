@@ -42,6 +42,7 @@ The script will install the application in the following destinations if you hav
 
 - Fedora by Spookyorange
 - Fedora Atomic(Silverblue) by Spookyorange
+- SteamOS(Steam Deck) by Spookyorange
 
 ## Contributing
 
