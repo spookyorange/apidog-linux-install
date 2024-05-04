@@ -75,6 +75,11 @@ $executable_path" >> $app_bin_in_local_bin
 
 echo "Created executable for your \$PATH if you ever need"
 
+if [ ! -d $local_application_path ]; then
+  echo "Creating the $local_application_path directory for desktop file"
+  mkdir $local_application_path
+fi
+
 touch $desktop_in_local_applications
 echo "
 [Desktop Entry]
