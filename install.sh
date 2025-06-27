@@ -19,7 +19,12 @@ desktop_terminal=false
 desktop_type=Application
 desktop_categories="Api;JSON;HTTP;Request;Web;Rest;API Client;"
 desktop_startup_wm_class="Apidog"
-desktop_exec="$executable_path %u"
+
+if [ "$XDG_SESSION_TYPE" = "wayland" ] || [ "$WAYLAND_DISPLAY" != "" ]; then
+  desktop_exec="$executable_path --enable-features=UseOzonePlatform --ozone-platform=wayland %u"
+else
+  desktop_exec="$executable_path %u"
+fi
 
 echo "Welcome to $display_name tarball installer, just chill and wait for the installation to complete!"
 
